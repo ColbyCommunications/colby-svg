@@ -1,0 +1,24 @@
+{
+  "name": "colbycomms/colby-svg",
+  "description":
+    "A library of SVGs used across projects, with a PHP class for loading and echoing them, plus a shortcode for use in WordPress.",
+  "type": "library",
+  "authors": [
+    {
+      "name": "John Watkins",
+      "email": "jwatkins@colby.edu"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "ColbyComms\\SVG\\": "wp/classes/"
+    },
+    "files": ["wp/index.php"]
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^6.5"
+  },
+  "scripts": {
+    "test": "phpunit"
+  }
+}
