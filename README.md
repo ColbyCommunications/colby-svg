@@ -48,7 +48,7 @@ The current list of available SVGs can be viewed in this repository's
 
 ## Shortcode
 
-A shortcode, `[colby-svg]` is available in WordPress projects that include this
+A shortcode, `[colby-svg]`, is available in WordPress projects that include this
 package. It accepts a single attribute, `name`, corresponding to the SVG
 filename.
 
