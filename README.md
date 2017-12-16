@@ -45,3 +45,13 @@ SVG::echo( 'colby-logo' ); // Echoes colby-logo.svg.
 
 The current list of available SVGs can be viewed in this repository's
 [/svg directory](https://github.com/ColbyCommunications/colby-svg/tree/master/svg).
+
+## Shortcode
+
+A shortcode, `[colby-svg]` is available in WordPress projects that include this
+package. It accepts a single attribute, `name`, corresponding to the SVG
+filename.
+
+```
+[colby-svg name="colby-logo"] <!-- Outputs colby-logo.svg -->
+```
