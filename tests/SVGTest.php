@@ -17,7 +17,7 @@ class SVGTest extends TestCase {
 	public function test_gets_path_from_filename() {
 		$this->assertEquals(
 			SVG::get_filename( 'facebook' ),
-			dirname( __FILE__, 2 ) . '/svg/facebook.svg'
+			__DIR__ . '/../svg/facebook.svg'
 		);
 	}
 

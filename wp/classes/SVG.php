@@ -9,7 +9,7 @@ class SVG {
 	 * @param string $name A filename.
 	 * @return string The sanitized filename.
 	 */
-	public static function sanitize( $name = '' ) {
+	static function sanitize( $name = '' ) {
 		return trim( str_replace( '.svg', '', $name ) );
 	}
 
@@ -19,9 +19,9 @@ class SVG {
 	 * @param string $name The filename.
 	 * @return string The full path of the file or an empty string if the file doesn't exist.
 	 */
-	public static function get_filename( $name = '' ) {
+	static function get_filename( $name = '' ) {
 		$name = str_replace( '.svg', '', $name );
-		$filename = dirname( __FILE__, 3 ) . "/svg/$name.svg";
+		$filename = __DIR__ . "/../../svg/$name.svg";
 
 		if ( file_exists( $filename ) ) {
 			return $filename;
