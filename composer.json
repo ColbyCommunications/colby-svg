@@ -17,11 +17,11 @@
     "files": ["wp/index.php"]
   },
   "require-dev": {
+    "phpunit/phpunit": "^5.0"
   },
   "scripts": {
     "test": "phpunit"
   },
   "require": {
-    "phpunit/phpunit": "^5"
   }
 }
