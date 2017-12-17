@@ -48,7 +48,7 @@ class SVG {
 	 *
 	 * @param string $name The name of a file in the /svg directory.
 	 */
-	static function echo( $name = '' ) {
+	static function render( $name = '' ) {
 		echo self::get( $name );
 	}
 }
