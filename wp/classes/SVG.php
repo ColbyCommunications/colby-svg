@@ -21,7 +21,7 @@ class SVG {
 	 */
 	static function get_filename( $name = '' ) {
 		$name = str_replace( '.svg', '', $name );
-		$filename = __DIR__ . "/../../svg/$name.svg";
+		$filename = dirname( dirname( __DIR__ ) ) . "/svg/$name.svg";
 
 		if ( file_exists( $filename ) ) {
 			return $filename;
