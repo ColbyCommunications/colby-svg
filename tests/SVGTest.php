@@ -44,7 +44,7 @@ class SVGTest extends TestCase {
 	public function test_svg_contents_are_echoed() {
 		ob_start();
 
-		SVG::render( 'hamburger' );
+		SVG::show( 'hamburger' );
 
 		$this->assertEquals(
 			ob_get_clean(),

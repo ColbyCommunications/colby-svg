@@ -28,7 +28,7 @@ use ColbyComms\SVG\SVG;
 $colby_logo = SVG::get( 'colby-logo' ); // Gets the contents of colby-logo.svg as a string.
 ```
 
-### ColbyComms\SVG\SVG::render( string $name = '' )
+### ColbyComms\SVG\SVG::show( string $name = '' )
 
 Echoes an SVG to the output buffer (or echoes an empty string if the file is not
 found.).
@@ -38,7 +38,7 @@ found.).
 
 use ColbyComms\SVG\SVG;
 
-SVG::render( 'colby-logo' ); // Echoes colby-logo.svg.
+SVG::show( 'colby-logo' ); // Echoes colby-logo.svg.
 ```
 
 ## Available SVGs.
