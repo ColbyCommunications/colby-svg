@@ -48,8 +48,7 @@ class SVG {
 		$name = self::sanitize( $name );
 		$filename = self::get_filename( $name );
 
-		$wp_filesystem = new WP_Filesystem_Direct();
-		return $filename ? $wp_filesystem->get_contents( $filename ) : '';
+		return $filename ? @file_get_contents( $filename ) : '';
 	}
 
 	/**

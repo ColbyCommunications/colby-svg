@@ -1,4 +1,4 @@
-<phpunit bootstrap="wp/index.php">
+<phpunit bootstrap="tests/bootstrap.php">
   <testsuites>
     <testsuite name="colby-svg">
       <directory>tests</directory>
