@@ -21,9 +21,9 @@
     "files": ["wp/index.php"]
   },
   "require-dev": {
-    "phpunit/phpunit": "3.7.*",
     "squizlabs/php_codesniffer": "*",
-    "wp-coding-standards/wpcs": "dev-master"
+    "wp-coding-standards/wpcs": "dev-master",
+    "phpunit/phpunit": "4"
   },
   "require": {}
 }
