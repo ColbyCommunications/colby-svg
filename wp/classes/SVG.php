@@ -1,7 +1,15 @@
 <?php
+/**
+ * Svg.php
+ *
+ * @package colbycomms/colby-svg
+ */
 
 namespace ColbyComms\SVG;
 
+/**
+ * Provides methods for fetching and displaying SVG files.
+ */
 class SVG {
 	/**
 	 * Sanitize the filename.
@@ -9,7 +17,7 @@ class SVG {
 	 * @param string $name A filename.
 	 * @return string The sanitized filename.
 	 */
-	static function sanitize( $name = '' ) {
+	public static function sanitize( $name = '' ) {
 		return trim( str_replace( '.svg', '', $name ) );
 	}
 
@@ -19,7 +27,7 @@ class SVG {
 	 * @param string $name The filename.
 	 * @return string The full path of the file or an empty string if the file doesn't exist.
 	 */
-	static function get_filename( $name = '' ) {
+	public static function get_filename( $name = '' ) {
 		$name = str_replace( '.svg', '', $name );
 		$filename = dirname( dirname( __DIR__ ) ) . "/svg/$name.svg";
 
@@ -36,11 +44,12 @@ class SVG {
 	 * @param string $name The name of a file in the /svg directory.
 	 * @return string The file contents if it exists.
 	 */
-	static function get( $name = '' ) {
+	public static function get( $name = '' ) {
 		$name = self::sanitize( $name );
 		$filename = self::get_filename( $name );
 
-		return $filename ? file_get_contents( $filename ) : '';
+		$wp_filesystem = new WP_Filesystem_Direct();
+		return $filename ? $wp_filesystem->get_contents( $filename ) : '';
 	}
 
 	/**
@@ -48,7 +57,7 @@ class SVG {
 	 *
 	 * @param string $name The name of a file in the /svg directory.
 	 */
-	static function show( $name = '' ) {
+	public static function show( $name = '' ) {
 		echo self::get( $name );
 	}
 }

@@ -1,21 +1,29 @@
 <?php
+/**
+ * Handles the [colby-svg] shortcode.
+ *
+ * @package colbycomms/colby-svg
+ */
 
 namespace ColbyComms\SVG;
 
 use ColbyComms\SVG\SVG;
 
+/**
+ * Shortcode [colby-svg name="example"].
+ */
 class Shortcode {
 	/**
 	 * Hooks the add_shortcode function to init.
 	 */
-	function __construct() {
+	public function __construct() {
 		add_action( 'init', [ $this, 'add_shortcode' ] );
 	}
 
 	/**
 	 * Adds the shortcode.
 	 */
-	function add_shortcode() {
+	public function add_shortcode() {
 		if ( ! shortcode_exists( 'colby-svg' ) ) {
 			add_shortcode( 'colby-svg', [ $this, 'render_shortcode' ] );
 		}
@@ -27,7 +35,7 @@ class Shortcode {
 	 * @param array $atts The shortcode attributes.
 	 * @return string The shortcode output.
 	 */
-	function render_shortcode( array $atts = [] ) {
+	public function render_shortcode( array $atts = [] ) {
 		if ( ! isset( $atts['name'] ) ) {
 			return '';
 		}
