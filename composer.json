@@ -6,7 +6,7 @@
   "license": "MIT",
   "scripts": {
     "lint": "./vendor/bin/phpcs --extensions=php -s",
-    "test": "phpunit"
+    "test": "./vendor/bin/phpunit"
   },
   "authors": [
     {
@@ -23,7 +23,7 @@
   "require-dev": {
     "squizlabs/php_codesniffer": "*",
     "wp-coding-standards/wpcs": "dev-master",
-    "phpunit/phpunit": "4"
+    "phpunit/phpunit": "5.6.0"
   },
   "require": {}
 }
