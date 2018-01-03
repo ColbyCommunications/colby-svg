@@ -1,5 +1,6 @@
 language: php
 install:
+  - rm -rf composer.lock
   - composer install
 php:
   - '5.6'
