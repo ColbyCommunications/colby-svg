@@ -40,6 +40,6 @@ class Shortcode {
 			return '';
 		}
 
-		return SVG::get( $atts['name'] );
+		return str_replace( ["\n", "\r"], '', SVG::get( $atts['name'] ) );
 	}
 }
