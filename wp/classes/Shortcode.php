@@ -40,6 +40,6 @@ class Shortcode {
 			return '';
 		}
 
-		return SVG::get( 'name' );
+		return SVG::get( $atts['name'] );
 	}
 }
