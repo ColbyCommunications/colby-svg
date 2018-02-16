@@ -1,4 +1,4 @@
-# colby-svg
+# colby-svg [![Build Status](https://travis-ci.org/ColbyCommunications/colby-svg.svg?branch=master)](https://travis-ci.org/ColbyCommunications/colby-svg)
 
 A library of SVGs used across projects, with a PHP class for loading and echoing
 them, plus a shortcode for use in WordPress themes.
